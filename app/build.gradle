@@ -39,6 +39,8 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -74,6 +76,17 @@ dependencies {
     provided 'org.glassfish:javax.annotation:10.0-b28'
 
     testCompile 'junit:junit:4.12'
+
+    // Needed to build and run Espresso Tests
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.1') {
+        exclude group: 'javax.inject'
+    }
+    // Needed to specify updated Support Annotations
+    androidTestCompile 'com.android.support:support-annotations:23.2.0'
+    // Needed for Instrumentation Tests
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    // Needed to use JUnit 4 Rules
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
 }
 
 retrolambda {
