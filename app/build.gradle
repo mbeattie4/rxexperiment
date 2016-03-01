@@ -58,10 +58,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Android Support Libraries
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile 'com.android.support:support-v13:23.1.1'
-    compile 'com.android.support:support-annotations:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:support-v13:23.2.0'
+    compile 'com.android.support:support-annotations:23.2.0'
 
     // Rx Libraries
     compile 'io.reactivex:rxjava:1.1.1'
