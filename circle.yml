@@ -10,6 +10,9 @@ machine:
     environment:
         ANDROID_HOME: /usr/local/android-sdk-linux
 
+    java:
+        version: oraclejdk8
+
 dependencies:
     pre:
         - echo y | android update sdk --no-ui --all --filter "tools"
@@ -20,6 +23,7 @@ dependencies:
         - echo y | android update sdk --no-ui --all --filter "extra-android-m2repository"
         - echo y | android update sdk --no-ui --all --filter "extra-google-m2repository"
         - echo y | android update sdk --no-ui --all --filter "extra-google-google_play_services"
+
     override:
         - ANDROID_HOME=/usr/local/android-sdk-linux ./gradlew dependencies
 
