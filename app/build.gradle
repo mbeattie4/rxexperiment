@@ -90,6 +90,8 @@ dependencies {
 }
 
 retrolambda {
+    jdk System.getenv("JAVA8_HOME")
+
     // Version 22.1.0 of the support library broke retrolambda processing, unless you add the following noverify
     // argument. See the following link for more details: https://github.com/evant/gradle-retrolambda/issues/105
     jvmArgs '-noverify'
